@@ -144,7 +144,7 @@ body{
     background: var(--tenne-tawny-dark);
 }
 
-/*Meal details*/
+/*Meal details
 .meal-details{
     position:fixed;
     top: 50%;
@@ -178,7 +178,7 @@ body{
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
-}
+}*/
 
 /*js related*/
 .showRecipe{
