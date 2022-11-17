@@ -6,13 +6,18 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 //event listeners 
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
-//FINISH CODE AT 37:00
+recipeCloseBtn.addEventListener('click', () => {mealDetailsContent.parentElement.classList
+    .remove('showRecipe')
+});
+
 
 //get meal list that matches with the ingredient 
 function getMealList()
 {
     let searchInputTxt = document.getElementById('search-input').value.trim();
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`).then(response => response.json()).then(data => {
+    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`)
+    .then(response => response.json())
+    .then(data => {
         let html = "";
         if(data.meals){
             data.meals.forEach(meal => {
@@ -38,15 +43,14 @@ function getMealList()
     });
 }
 
-//30:00 stopped on 10/23
 
 // get recipe of the meal
-
 function getMealRecipe(e) {
-    e.preventDefault();
+    e.preventDefault(); 
+    //console.log(e.target); // test to see if it shows up in the console panel
     if (e.target.classList.contains('recipe-btn')) {
         let mealItem = e.target.parentElement.parentElement;
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i={mealItem.dataset.id}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));
     }
