@@ -34,8 +34,47 @@ body{
 .title{
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    
 }
 
+.the-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    position: absolute;
+    top: -29%;
+    left: 1.5%;
+    color: rgb(34, 58, 29);
+    -webkit-text-stroke: 1px white;
+    
+}
+
+.titleScreen {
+    position: relative;
+    
+}
+.front-imgs {
+    max-width: 100%;
+    text-align: center;
+    display: block;
+    margin-left: -0.5rem;
+    margin-right: -2.5rem;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
+
+}
+
+/* 
+    - add basil text as position in an image
+    - grayscale slightly
+    - rotate img
+
+} */
 .container{
     min-height:100vh;
 }
@@ -48,7 +87,7 @@ body{
     text-align: center;
 }
 .meal-search{
-    margin: 2rem 0;
+    margin: 2rem 3rem;
 }
 .meal-search cite{
     font-size: 1rem;
@@ -266,6 +305,21 @@ body{
 }
 .recipe-link a:hover{
     opacity: 0.5;
+}
+.footer {
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    font-size: 12px;
+}
+hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    border-top-style: inset;
+    border-top-width: 1px;
 }
 
 /*not found*/
